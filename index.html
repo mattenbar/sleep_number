@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sleep Number PDP Gallery Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://product-gallery.cloudinary.com/latest/all.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Sleep Number demo home">
+        <span class="brand-mark">SN</span>
+        <span>Sleep Number</span>
+      </a>
+      <nav class="header-nav" aria-label="Primary">
+        <a href="#">Beds</a>
+        <a href="#">Bedding</a>
+        <a href="#">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="pdp-layout" aria-label="Product detail">
+        <div class="gallery-panel">
+          <div class="gallery-meta">
+            <span>Cloudinary Product Gallery</span>
+            <span class="status-pill" id="galleryStatus">Initializing</span>
+          </div>
+          <div id="cloudinaryGallery" class="cloudinary-gallery" aria-label="Product media gallery"></div>
+          <div id="fallbackGallery" class="fallback-gallery" hidden aria-label="Product media gallery fallback"></div>
+        </div>
+
+        <aside class="product-panel">
+          <p class="eyebrow">Sheets and bedding</p>
+          <h1>Essential Fit Cotton Sheet Set</h1>
+          <div class="rating-row" aria-label="Rated 4.7 out of 5">
+            <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span>4.7</span>
+            <span>1,248 reviews</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price">$111.99</span>
+            <span class="price-note">Queen sheet set</span>
+          </div>
+
+          <div class="option-block">
+            <div class="option-heading">
+              <span>Color</span>
+              <strong id="activeColor">Wheat</strong>
+            </div>
+            <div class="swatch-grid" id="colorOptions" role="radiogroup" aria-label="Sheet color"></div>
+          </div>
+
+          <div class="option-block">
+            <div class="option-heading">
+              <span>Size</span>
+              <strong>Queen</strong>
+            </div>
+            <div class="size-grid" aria-label="Sheet size">
+              <button type="button">Twin XL</button>
+              <button type="button" class="selected">Queen</button>
+              <button type="button">King</button>
+              <button type="button">Split King</button>
+            </div>
+          </div>
+
+          <div class="purchase-row">
+            <button type="button" class="primary-action">Add to cart</button>
+            <button type="button" class="secondary-action">Find a store</button>
+          </div>
+
+          <dl class="media-summary">
+            <div>
+              <dt>Active media set</dt>
+              <dd id="activeSet">Sleep Number / Wheat</dd>
+            </div>
+            <div>
+              <dt>Gallery assets</dt>
+              <dd id="assetCount">Loading folder assets</dd>
+            </div>
+            <div>
+              <dt>Delivery</dt>
+              <dd>Cloudinary optimized media</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="payload-panel" aria-label="Variant payload">
+        <div>
+          <p class="eyebrow">PDP selection payload</p>
+          <h2>Variant-driven media swaps</h2>
+        </div>
+        <pre id="variantPayload" aria-label="Current variant media asset payload"></pre>
+      </section>
+    </main>
+  </body>
+</html>
